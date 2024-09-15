@@ -1,9 +1,9 @@
-import styles from './Header.module.css';
-import logo from '../assets/logoTodo.svg';
-export function Header(){
-    return(
-        <header className={styles.container}>
-            <img src={logo} alt="logo da aplicação" />
-        </header> 
-    )
+import styles from './Header.module.css'
+
+export function Header() {
+  return (
+    <header className={styles.container}>
+      <img src="/logo.svg" alt="logo da aplicação" />
+    </header>
+  )
 }
