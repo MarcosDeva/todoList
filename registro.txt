@@ -1,0 +1,26 @@
+npm create vite@latest
+
+npm install
+npm run dev
+
+
+trocar de porta
+vite.config.ts 
+    plugins: [react()],
+    server: {
+        port: 3001,
+    }
+
+    npm i @phosphor-icons/react
+
+
+    https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi?pli=1
+
+    3. Existem três momentos quando um componente é renderizado 
+        1. Quando o estado altera
+            const[comentario, setComentario] = useState(['']);
+        
+        2. Quando a propriedade altera
+        3. Quando um componente pai renderiza novamente
+
+        key ao passar a key={post.id}, ao ser feito uma alteração o react apenas renderiza o que foi mudado
