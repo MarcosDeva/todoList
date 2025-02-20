@@ -1,6 +1,7 @@
 .headerTask {
    display: flex;
    justify-content: space-between;
+   padding-bottom: 24px;
 }
 
 section {
@@ -72,12 +73,31 @@ section {
    margin-left: 8px;
 }
 
-.areaTask {
-
+.task {
+   display: flex;
+   align-items: flex-start;
+   border-radius: 8px;
+   padding: 16px;
+   background: var(--gray-500);
 }
 
-.task {
-   
+.task p {
+   padding-left: 16px;
+   padding-right: 16px;
+   color: var(--gray-100);
+}
+
+.task svg{
+   color: var(--gray-300);
+}
+
+.task > input {
+   width: 17px;
+   height: 17px;
+   cursor: pointer;
+}
+
+.areaTask {
 }
 
 .wrapper {
