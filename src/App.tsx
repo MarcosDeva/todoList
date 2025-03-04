@@ -8,12 +8,13 @@ import './global.css';
 
 function App() {
 
-  const [countTask, setCoutTask] = useState();
+  const [countTask, setCoutTask] = useState(0);
   const [tasks, setTasks] = useState(['']);
   const [newTaskText, setNewTaskText] = useState('');
 
   function handleCountCreateTask(){
-    return console.log('gyugygug');
+    var countTask :number = tasks.length;
+     setCoutTask(countTask); 
   }
 
   function handleCreateNewTask( event: FormEvent){
@@ -80,7 +81,7 @@ function App() {
 
             <div className={styles.areaTask}>
               <div className={styles.task}>
-                <input type="radio"  name="radio" />
+                <input type="checkbox"  name="radio" />
                 <p>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
                 <Trash 
                   size={24}

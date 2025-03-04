@@ -91,10 +91,17 @@ section {
    color: var(--gray-300);
 }
 
-.task > input {
+.task > input[type="checkbox"] {
    width: 17px;
    height: 17px;
    cursor: pointer;
+   border-radius: 50%;   
+}
+
+/* deixa taxado as letras todas vez que eu seleciono o imput */
+.task > input[type="checkbox"]:checked ~ p {
+   text-decoration: line-through;
+   color: var(--gray-300);
 }
 
 .areaTask {
