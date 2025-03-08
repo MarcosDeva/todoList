@@ -3,15 +3,19 @@ import { PlusCircle , Trash } from '@phosphor-icons/react';
 
 import styles from './Task.module.css';
 
-export function Task() {
+export interface TaskType {
+    id: number,
+    content: string
+}
 
-    const [countTask, setCoutTask] = useState(0);
+export function Task({ task } : TaskType) {
+
+    // const [countTask, setCoutTask] = useState(0);
     const [tasks, setTasks] = useState(['']);
     const [newTaskText, setNewTaskText] = useState('');
 
     function handleCountCreateTask(){
-        var countTask :number = tasks.length;
-        setCoutTask(countTask); 
+    
     }
 
     function handleCreateNewTask( event: FormEvent){
@@ -64,7 +68,7 @@ export function Task() {
                 <div className={styles.headerTask}>
 
                     <div className={styles.contTaskCreate}>
-                        <p>Tarefas criadas</p><span>{handleCountCreateTask}</span>
+                        <p>Tarefas criadas</p><span>0</span>
                     </div>
 
                     <div className={styles.contTaskDone}>
@@ -74,6 +78,21 @@ export function Task() {
                 </div>
 
                 <div className={styles.areaTask}>
+                    {tasks.map(task => {
+                        return(  
+                            <div className={styles.task}>
+                                <input type="checkbox" name="radio" />
+                                <p key={task}>{task}</p>
+                                <Trash
+                                    size={24}
+                                    weight="bold"
+                                />
+                            </div>
+                        )
+                    })}
+                </div>
+
+                {/* <div className={styles.areaTask}>
                     <div className={styles.task}>
                         <input type="checkbox" name="radio" />
                         <p>Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.</p>
@@ -82,7 +101,7 @@ export function Task() {
                             weight="bold"
                         />
                     </div>
-                </div>
+                </div> */}
             </section>
 
         </>

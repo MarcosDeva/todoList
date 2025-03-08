@@ -74,6 +74,7 @@
     border-radius: 8px;
     padding: 16px;
     background: var(--gray-500);
+    margin-bottom: 12px;
  }
  
  .task p {
