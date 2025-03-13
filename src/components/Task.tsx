@@ -8,10 +8,11 @@ export interface TaskType {
     content: string
 }
 
-export function Task({ task } : TaskType) {
+// export function Task({ task } : TaskType) {
+export function Task() {
 
     // const [countTask, setCoutTask] = useState(0);
-    const [tasks, setTasks] = useState(['']);
+    const [tasks, setTasks] = useState([]);
     const [newTaskText, setNewTaskText] = useState('');
 
     function handleCountCreateTask(){
@@ -84,7 +85,7 @@ export function Task({ task } : TaskType) {
                                 <input type="checkbox" name="radio" />
                                 <p key={task}>{task}</p>
                                 <Trash
-                                    size={24}
+                                    
                                     weight="bold"
                                 />
                             </div>

@@ -84,6 +84,8 @@
  }
  
  .task svg{
+   height: 24px;
+   width: 24px;
    margin-left: auto;
    color: var(--gray-300);
  }
