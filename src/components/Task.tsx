@@ -8,6 +8,11 @@ export interface TaskType {
     content: string
 }
 
+const tasks = [
+    { id: 1 , content: 'Reunião de Alinhamento' },
+    { id: 2 , content: 'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.' }
+    
+  ];
 // export function Task({ task } : TaskType) {
 export function Task() {
 
@@ -85,7 +90,7 @@ export function Task() {
                                 <input type="checkbox" name="radio" />
                                 <p key={task}>{task}</p>
                                 <Trash
-                                    
+                                    size={17}
                                     weight="bold"
                                 />
                             </div>
