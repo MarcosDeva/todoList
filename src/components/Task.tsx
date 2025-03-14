@@ -8,21 +8,23 @@ export interface TaskType {
     content: string
 }
 
-const tasks = [
+const ntasks : TaskType[] = [
     { id: 1 , content: 'Reunião de Alinhamento' },
-    { id: 2 , content: 'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.' }
+    { id: 2 , content: 'Integer urna interdum massa libero auctor neque turpis turpis semper. Duis vel sed fames integer.' },
     
   ];
+
 // export function Task({ task } : TaskType) {
 export function Task() {
 
+
     // const [countTask, setCoutTask] = useState(0);
-    const [tasks, setTasks] = useState([]);
+    const [tasks, setTasks] = useState(['']);
     const [newTaskText, setNewTaskText] = useState('');
 
-    function handleCountCreateTask(){
+    // function handleCountCreateTask(){
     
-    }
+    // }
 
     function handleCreateNewTask( event: FormEvent){
         event.preventDefault();
@@ -49,7 +51,6 @@ export function Task() {
                 onSubmit={handleCreateNewTask}
                 className={styles.taskForm}
             >
-                {/* https://scontent.fvcp3-1.fna.fbcdn.net/v/t39.30808-6/245932367_1245695815842644_2112921870281147131_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeET6rpDzsPxOf9G12Cy20TUCcgZvssOpMwJyBm-yw6kzDRmeJR1exw1sxm72QfxWqMcAXunJ63JucfBDJ28oReZ&_nc_ohc=bJc3ZGtLnpUQ7kNvgEiYhP5&_nc_oc=AdiBWiJIvr7OpRKCKaehTQRz9f1cyuYzczjrj2ZuLtOvxqhb8xwKGWWSbHyqMOVTpeCJxEDDfNS86iNCtvSW94Cu&_nc_zt=23&_nc_ht=scontent.fvcp3-1.fna&_nc_gid=A-87pJozd5RLQB1l04VtFi5&oh=00_AYAxFLKH2jjsyBYbNNk1vmuApZ_BVi6NBjAfwn6XlC8_0Q&oe=67B2E853 */}
                 <input
                     name="task"
                     placeholder="Adicione uma nova tarefa"
@@ -84,11 +85,11 @@ export function Task() {
                 </div>
 
                 <div className={styles.areaTask}>
-                    {tasks.map(task => {
+                    {ntasks.map(task => {
                         return(  
                             <div className={styles.task}>
                                 <input type="checkbox" name="radio" />
-                                <p key={task}>{task}</p>
+                                <p key={task.id}>{task.content}</p>
                                 <Trash
                                     size={17}
                                     weight="bold"
